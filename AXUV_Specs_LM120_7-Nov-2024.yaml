@@ -1,0 +1,398 @@
+simplified_sim_geometry_ID: LM26_120
+AXUV_A:
+  assembly_number: 1
+  cable_number: 1
+  diodes:
+    D1:
+      diode_location_vector:
+        r1: 532
+        r2: 532
+        t1: 267
+        t2: 267
+        z1: 3081.0
+        z2: 2401.0
+      cone_angle_deg: 14.42
+      diameter_aperture_mm: 7.5
+      signal_name: AXUV_chan_1
+      responsivity: 0.26
+      filter_transmission: f1
+      gain: 1e5
+      diode_serial_number: 1
+      name: 6um Mylar Filtered Diode, AXUV A
+    D2:
+      diode_location_vector:
+        r1: 532
+        r2: 532
+        t1: 267
+        t2: 267
+        z1: 3081.0
+        z2: 2401.0
+      cone_angle_deg: 14.42
+      diameter_aperture_mm: 7.5
+      signal_name: AXUV_chan_2
+      responsivity: 0.26
+      filter_transmission: f2
+      gain: 1e6
+      diode_serial_number: 2
+      name: 13um Mylar Filtered Diode, AXUV A
+    D3:
+      diode_location_vector:
+        r1: 532
+        r2: 532
+        t1: 267
+        t2: 267
+        z1: 3081.0
+        z2: 2401.0
+      cone_angle_deg: 14.42
+      diameter_aperture_mm: 7.5
+      signal_name: AXUV_chan_3
+      responsivity: 0.26
+      filter_transmission: f3
+      gain: 1e6
+      diode_serial_number: 3
+      name: 25um Mylar Filtered Diode, AXUV A
+    D4:
+      diode_location_vector:
+        r1: 532
+        r2: 532
+        t1: 267
+        t2: 267
+        z1: 3081.0
+        z2: 2401.0
+      cone_angle_deg: 14.42
+      diameter_aperture_mm: 7.5
+      signal_name: AXUV_chan_4
+      responsivity: 0.26
+      filter_transmission: N/A
+      diode_serial_number: 4
+      name: Unfiltered Diode, AXUV A
+  ratios:
+    ratio_1:
+      Dx: D1
+      Dy: D2
+      effective_location_vector:
+        r1: 532
+        r2: 532
+        t1: 267
+        t2: 267
+        z1: 3081.0
+        z2: 2401.0
+      cone_angle_deg: 14.42
+      diameter_aperture_mm: 7.5
+    ratio_2:
+      Dx: D2
+      Dy: D3
+      effective_location_vector:
+        r1: 532
+        r2: 532
+        t1: 267
+        t2: 267
+        z1: 3081.0
+        z2: 2401.0
+      cone_angle_deg: 14.42
+      diameter_aperture_mm: 7.5
+    ratio_3:
+      Dx: D3
+      Dy: D1
+      effective_location_vector:
+        r1: 532
+        r2: 532
+        t1: 267
+        t2: 267
+        z1: 3081.0
+        z2: 2401.0
+      cone_angle_deg: 14.42
+      diameter_aperture_mm: 7.5
+
+AXUV_B:
+  assembly_serial_number: 2
+  cable_serial_number: 1
+  diodes:
+    D1:
+      diode_location_vector:
+        r1: 300
+        r2: 300
+        t1: 300
+        t2: 300
+        z1: 3081.0
+        z2: 2401.0
+      cone_angle_deg: 8.1
+      diameter_aperture_mm: 2
+      signal_name: AXUV_chan_5
+      responsivity: 0.26
+      filter_transmission: f1
+      gain: 1e5
+      diode_serial_number: 5
+      name: 6um Mylar Filtered Diode, AXUV B
+    D2:
+      diode_location_vector:
+        r1: 300
+        r2: 300
+        t1: 300
+        t2: 300
+        z1: 3081.0
+        z2: 2401.0
+      cone_angle_deg: 8.1
+      diameter_aperture_mm: 2
+      signal_name: AXUV_chan_6
+      responsivity: 0.26
+      filter_transmission: f2
+      gain: 1e6
+      diode_serial_number: 6
+      name: 13um Mylar Filtered Diode, AXUV B
+    D3:
+      diode_location_vector:
+        r1: 300
+        r2: 300
+        t1: 300
+        t2: 300
+        z1: 3081.0
+        z2: 2401.0
+      cone_angle_deg: 8.1
+      diameter_aperture_mm: 2
+      signal_name: AXUV_chan_7
+      responsivity: 0.26
+      filter_transmission: f3
+      gain: 1e6
+      diode_serial_number: 7
+      name: 25um Mylar Filtered Diode, AXUV B
+    D4:
+      diode_location_vector:
+        r1: 300
+        r2: 300
+        t1: 300
+        t2: 300
+        z1: 3081.0
+        z2: 2401.0
+      cone_angle_deg: 8.1
+      diameter_aperture_mm: 2
+      signal_name: AXUV_chan_8
+      responsivity: 0.26
+      filter_transmission: N/A
+      diode_serial_number: 8
+      name: Unfiltered Diode, AXUV B
+  ratios:
+    ratio_1:
+      Dx: D1
+      Dy: D2
+      effective_location_vector:
+        r1: 300
+        r2: 300
+        t1: 300
+        t2: 300
+        z1: 3081.0
+        z2: 2401.0
+      cone_angle_deg: 8.1
+      diameter_aperture_mm: 2
+    ratio_2:
+      Dx: D2
+      Dy: D3
+      effective_location_vector:
+        r1: 300
+        r2: 300
+        t1: 300
+        t2: 300
+        z1: 3081.0
+        z2: 2401.0
+      cone_angle_deg: 8.1
+      diameter_aperture_mm: 2
+    ratio_3:
+      Dx: D3
+      Dy: D1
+      effective_location_vector:
+        r1: 300
+        r2: 300
+        t1: 300
+        t2: 300
+        z1: 3081.0
+        z2: 2401.0
+      cone_angle_deg: 8.1
+      diameter_aperture_mm: 2
+
+AXUV_C:
+  assembly_serial_number: 3
+  cable_serial_number: 1
+  diodes:
+    D1:
+      diode_location_vector:
+        r1: 185.34
+        r2: 264
+        t1: 60
+        t2: 60
+        z1: 3082.52
+        z2: 2401.0
+      cone_angle_deg: 8.45
+      diameter_aperture_mm: 2.5
+      signal_name: AXUV_chan_9
+      responsivity: 0.26
+      filter_transmission: f1
+      gain: 1e5
+      diode_serial_number: 9
+      name: 6um Mylar Filtered Diode, high gain channel, AXUV C
+    D2:
+      diode_location_vector:
+        r1: 185.34
+        r2: 264
+        t1: 60
+        t2: 60
+        z1: 3082.52
+        z2: 2401.0
+      cone_angle_deg: 8.45
+      diameter_aperture_mm: 2.5
+      signal_name: AXUV_chan_10
+      responsivity: 0.26
+      filter_transmission: f2
+      gain: 1e6
+      diode_serial_number: 10
+      name: 13um Mylar Filtered Diode, high gain channel, AXUV C
+    D3:
+      diode_location_vector:
+        r1: 185.34
+        r2: 264
+        t1: 60
+        t2: 60
+        z1: 3082.52
+        z2: 2401.0
+      cone_angle_deg: 6.76
+      diameter_aperture_mm: 1
+      signal_name: AXUV_chan_11
+      responsivity: 0.26
+      filter_transmission: f2
+      gain: 1e4
+      diode_serial_number: 11
+      name: 13um Mylar Filtered Diode, low gain channel, AXUV C
+    D4:
+      diode_location_vector:
+        r1: 185.34
+        r2: 264
+        t1: 60
+        t2: 60
+        z1: 3082.52
+        z2: 2401.0
+      cone_angle_deg: 6.76
+      diameter_aperture_mm: 1
+      signal_name: AXUV_chan_12
+      responsivity: 0.26
+      filter_transmission: f3
+      gain: 1e4
+      diode_serial_number: 12
+      name: 25um Mylar Filtered Diode, low gain channel, AXUV C
+  ratios:
+    ratio_1:
+      Dx: D1
+      Dy: D2
+      effective_location_vector:
+        r1: 185.34
+        r2: 264
+        t1: 60
+        t2: 60
+        z1: 3082.52
+        z2: 2401.0
+      cone_angle_deg: 8.45
+      diameter_aperture_mm: 2.5
+    ratio_2:
+      Dx: D3
+      Dy: D4
+      effective_location_vector:
+        r1: 185.34
+        r2: 264
+        t1: 60
+        t2: 60
+        z1: 3082.52
+        z2: 2401.0
+      cone_angle_deg: 6.76
+      diameter_aperture_mm: 1
+
+AXUV_D:
+  assembly_serial_number: 4
+  cable_serial_number: 1
+  diodes:
+    D1:
+      diode_location_vector:
+        r1: 151.34
+        r2: 184.75
+        t1: 120
+        t2: 120
+        z1: 3081.6
+        z2: 2401.0
+      cone_angle_deg: 8.11
+      diameter_aperture_mm: 2.5
+      signal_name: AXUV_chan_13
+      responsivity: 0.26
+      filter_transmission: f1
+      gain: 1e5
+      diode_serial_number: 13
+      name: 6um Mylar Filtered Diode, high gain channel, AXUV D
+    D2:
+      diode_location_vector:
+        r1: 151.34
+        r2: 184.75
+        t1: 120
+        t2: 120
+        z1: 3081.6
+        z2: 2401.0
+      cone_angle_deg: 8.11
+      diameter_aperture_mm: 2.5
+      signal_name: AXUV_chan_14
+      responsivity: 0.26
+      filter_transmission: f2
+      gain: 1e6
+      diode_serial_number: 14
+      name: 13um Mylar Filtered Diode, high gain channel, AXUV D
+    D3:
+      diode_location_vector:
+        r1: 151.34
+        r2: 184.75
+        t1: 120
+        t2: 120
+        z1: 3081.6
+        z2: 2401.0
+      cone_angle_deg: 3.38
+      diameter_aperture_mm: 1
+      signal_name: AXUV_chan_15
+      responsivity: 0.26
+      filter_transmission: f2
+      gain: 1e4
+      diode_serial_number: 15
+      name: 13um Mylar Filtered Diode, low gain channel, AXUV D
+    D4:
+      diode_location_vector:
+        r1: 151.34
+        r2: 184.75
+        t1: 120
+        t2: 120
+        z1: 3081.6
+        z2: 2401.0
+      cone_angle_deg: 3.38
+      diameter_aperture_mm: 1
+      signal_name: AXUV_chan_16
+      responsivity: 0.26
+      filter_transmission: N/A
+      gain: 1e4
+      diode_serial_number: 16
+      name: 25um Mylar Filtered Diode, low gain channel, AXUV D
+  ratios:
+    ratio_1:
+      Dx: D1
+      Dy: D2
+      effective_location_vector:
+        r1: 151.34
+        r2: 184.75
+        t1: 120
+        t2: 120
+        z1: 3081.6
+        z2: 2401.0
+      cone_angle_deg: 8.11
+      diameter_aperture_mm: 2.5
+    ratio_2:
+      Dx: D3
+      Dy: D4
+      effective_location_vector:
+        r1: 151.34
+        r2: 184.75
+        t1: 120
+        t2: 120
+        z1: 3081.6
+        z2: 2401.0
+      cone_angle_deg: 3.38
+      diameter_aperture_mm: 1
