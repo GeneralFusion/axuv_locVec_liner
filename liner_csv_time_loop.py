@@ -8,6 +8,7 @@ import math
 # assume in t1=t2 (in this case it is)
 import read_axuv_yaml
 yaml_file='./AXUV_Specs_LM120_7-Nov-2024.yaml'
+# read location vecotr
 axuv=read_axuv_yaml.read_yaml(yaml_file)
 
 nchord=0
@@ -32,6 +33,7 @@ for chordname in axuv:
     print('num ratios=', round(num_ratio[mchord]))
     mchord=mchord+1
 
+#file_dir is the location of JSD liner trajectory data in csv files. 
 file_dir='./liner_trajectory_csim_1005D/timesliced/'
 t_us_start=0
 dt_us=10
@@ -46,6 +48,7 @@ for t_us in range(t_us_start, t_us_end, dt_us):
   r=np.zeros(npoints)
   z=np.zeros(npoints)
   k=0
+  #read liner trajectory
   with open(filename, mode='r') as file:
     test=csv.reader(file)
     for lines in test:
@@ -54,7 +57,7 @@ for t_us in range(t_us_start, t_us_end, dt_us):
       k=k+1
 
 
-
+  #read location vectors
   for chordname in axuv:
     if chordname[0:4]=='AXUV':
       for ratio in axuv[chordname]['ratios']:
@@ -71,6 +74,7 @@ for t_us in range(t_us_start, t_us_end, dt_us):
         y2=vr2*math.sin(vt2*math.pi/180.0)
         flag=0
         i=npoints-1
+        #check upper edge of the beam
         if axuv[chordname]['ratios'][ratio]['block_start']==0:
           while (flag==0 and z[i]>0.0):
             r2p=read_axuv_yaml.cal_r_edge(z[i],x1,x2,y1,y2,vz1,vz2,hangle)
@@ -83,6 +87,7 @@ for t_us in range(t_us_start, t_us_end, dt_us):
         #   print(chordname,ratio,'upper blocked')
         flag=0
         i=npoints-1
+        #check mid line of the beam
         if axuv[chordname]['ratios'][ratio]['block_mid']==0:
           while (flag==0 and z[i]>0.0):
             if r[i]<read_axuv_yaml.radius(z[i], vr1,vr2, vt1, vt2, vz1, vz2):
@@ -92,6 +97,7 @@ for t_us in range(t_us_start, t_us_end, dt_us):
             i=i-1
         flag=0
         i=npoints-1
+        #check lower edge of the beam
         if axuv[chordname]['ratios'][ratio]['block_all']==0:
           while (flag==0 and z[i]>0.0):
              r2m=read_axuv_yaml.cal_r_edge(z[i],x1,x2,y1,y2,vz1,vz2,-hangle)
@@ -108,16 +114,9 @@ for chordname in axuv:
   if chordname[0:4]=='AXUV':
     for ratio in axuv[chordname]['ratios']:
       nratio=nratio+1
-      #axuv[chordname]['ratios'][ratio]['block_start']=0
-      #axuv[chordname]['ratios'][ratio]['block_all']=0
       print(chordname, ' with ' , ratio, 'block start at ', axuv[chordname]['ratios'][ratio]['block_start_t_us'], ' us')
       print(chordname, ' with ' , ratio, 'block mid at ', axuv[chordname]['ratios'][ratio]['block_mid_t_us'], ' us')
       print(chordname, ' with ' , ratio, 'block all at ', axuv[chordname]['ratios'][ratio]['block_all_t_us'], ' us')
      
-#plt.plot(z,r)
-#plt.plot(z[0:30],r[0:30], color='r')
-
-
-#plt.show()
 
 
