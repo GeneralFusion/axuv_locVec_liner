@@ -113,10 +113,19 @@ for t_us in range(t_us_start, t_us_end, dt_us):
 for chordname in axuv:
   if chordname[0:4]=='AXUV':
     for ratio in axuv[chordname]['ratios']:
-      nratio=nratio+1
       print(chordname, ' with ' , ratio, 'block start at ', axuv[chordname]['ratios'][ratio]['block_start_t_us'], ' us')
       print(chordname, ' with ' , ratio, 'block mid at ', axuv[chordname]['ratios'][ratio]['block_mid_t_us'], ' us')
       print(chordname, ' with ' , ratio, 'block all at ', axuv[chordname]['ratios'][ratio]['block_all_t_us'], ' us')
      
+import csv
+with open('liner_axuv_view.csv', 'w', newline='') as csvfile:
+    outwriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+    outwriter.writerow(['view'] + ['ratio'] + ['block_start_t_us']+['block_mid_t_us']+['block_all_t_us']) 
+    for chordname in axuv:
+      if chordname[0:4]=='AXUV':
+        for ratio in axuv[chordname]['ratios']:
+          outwriter.writerow([chordname] + [str(ratio)] + [str(axuv[chordname]['ratios'][ratio]['block_start_t_us'])] 
++ [str(axuv[chordname]['ratios'][ratio]['block_mid_t_us'])]+ [str(axuv[chordname]['ratios'][ratio]['block_all_t_us'])])
+
 
 
